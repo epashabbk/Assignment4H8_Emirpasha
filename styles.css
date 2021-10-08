@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+.banner {
+  height: 100vh;
+  background: url(assets/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-yellow {
+  height: 100vh;
+  background: url(assets/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-green {
+  height: 100vh;
+  background-color: #7cb518;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding-bottom: 10%;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif !important;
+  background-color: white;
+}
+
+.display1{
+  margin: auto;
+}
+
+.display2{
+  margin: auto;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  background-color: #7d0085;
+}
+
+.nav-item{
+  padding-right: 20px;
+  font-weight: 400;
+}
+
+.nav-item > .active{
+  padding-right: 20px;
+  font-weight: 500;
+}
+
+.nav-item:hover{
+  padding-right: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.imageheader1{
+  background: url(assets/images/Banteng.svg);
+  background-repeat:no-repeat;
+  background-size: 600px;
+  height: 600px;
+  min-width: 600px;
+  width: 600px;
+  margin: auto;
+  padding: auto;
+}
+
+.imageheader2{
+  background: url(assets/images/Banteng.svg);
+  background-size: 350px;
+  height: 350px;
+  min-width: 350px;
+  width: 350px;
+  margin: auto;
+  padding: auto;
+}
+
+
+/* Information 1 */
+.containerbody1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+  max-width: 1500px;
+}
+
+.text-left{
+  text-align:left;
+}
+
+.content2{
+    margin-left: 5%;
+}
+
+
+h2{
+  /* margin-top: 0 20%; */
+  /* padding: 5px; */
+  font-size: 200%;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+h3{
+  /* margin-top: 0 20%; */
+  /* padding: 5px; */
+  font-size: 200%;
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+
+p{
+  color: gray;
+}
+
+.row{
+  display: flexbox;
+}
+
+.text-justify{
+  font-size: x-large;
+  padding-right: 40px;
+}
+
+input[disabled]{
+  background-color:white !important;
+}
+
+
+/* CARDS */
+.container-why-study-basa .card{
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 20px 40px;
+  padding-bottom: 80px;
+}
+
+.container-why-study-basa .card-img-top {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+#SellingPoints {
+  background-color: white;
+  padding: 20px 0px;
+  padding-bottom: 30px;
+  margin-bottom: 100px;
+}
+
+#SellingPoints h3 {
+  font-weight: 800;
+}
+
+.title {
+  text-align: center;
+}
+
+footer p{
+  color: #330036;
+}
+
+footer h6 {
+  color: #111111;
+}
+
+footer .container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* HALAMAN 2 - PROGRAM KELAS */
+
+.HeadProgram {
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 50px;
+}
+
+.row-kelas{
+  align-items: center;
+  display: flex;
+  text-align: center;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.container-fluid-program{
+  display: inline-flex;
+  margin-inline-end: auto;
+}
+
+
+#InstaBTN{
+  background-image: none;
+  /* href="https://www.instagram.com/lingoloka/?hl=en" */
+}
+
+#YoutubeBTN{
+  background-image: none;
+  /* href="https://www.youtube.com/c/Lingoloka" */
+}
+
+
+/* Todo CSS */
+
+
+/* .contentTodo{
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input,
+form button{
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+.form button{
+  color: #d88771;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover{
+  background: #d88771;
+  color: white;
+} */
+
+
+/* Blog */
+
+.blog{
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.blogcontent{
+  padding: 11.2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+.feedcards{
+  display: flex;
+  flex-direction: row;
+  width: calc(100% + 36px);
+  margin-left: -18px;
+  flex-wrap: wrap;
+}
+
+.feedcards .post{
+  width: calc(33.333333% - 36px);
+  margin: 0 18px 36 px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 0;
+}
+
+.post-card {
+  background: #58CC02;
+  border-radius: 12px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.post-card .card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.a[class] {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.tag-research .post-card-image, .tag-research .post-image {
+  background-color: #CE82FF;
+}
+
+.post-card-image, .post-image {
+  background-size: 125px;
+  background-position: bottom 15px right 15px;
+  height: 100%;
+}
+
+.post-card .card-content {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.post-card .tag-token{
+  top: 28px;
+  right: 28px;
+  font-size: 1.2rem;
+  padding: 6px 8px 5px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  position: absolute;
+  bottom: auto;
+  text-align: center;
+}
+
+.post-card-time{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .65px;
+  font-weight: 700;
+  opacity: .7;
+  margin-bottom: 0.8rem;
+}
+
+.post-card .card-title{
+  font-size: 3.2rem;
+  margin-bottom: 1.4rem;
+  color: white;
+  line-height: 1.25;
+  flex-grow: 0;
+}
+
+.post-card .card-meta{
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  letter-spacing: -.1px;
+  color: white;
+  opacity: 0.8;
+  padding-right: 90px;
+}
+.post-card .card-meta .authors {
+  display: inline-block;
+  color: white;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel='stylesheet'
+    type='text/css'>
+
+  <!-- Script JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="/scripts.js"></script>
+
+  <link rel="icon" href="assets/logo/Favicon.ico" type="image/icon">
+
+  <title>basabasa</title>
+
+  <script>
+    $(document).ready(function () {
+      $('#header').load("_header.html header");
+      $('#footer').load("_footer.html footer");
+
+      setTimeout(function(){ $('li #about').addClass('active') }, 100);
+    });
+  </script>
+</head>
+
+<body>
+  <style>
+    .banner-yellow {
+      height: 250px !important;
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding-top: 40px;
+    }
+
+    .tab-content {
+      margin-top: 12px;
+    }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+      border-width: 0px;
+      border-bottom: 3px solid #7CB518;
+      color: #7CB518;
+    }
+
+    .nav-tabs .nav-link {
+      color: #666;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .nav-tabs .nav-item {
+      margin-right: auto;
+    }
+
+    .section-text {
+      font-size: 1.6em;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .section-text h4 {
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .container {
+      margin-bottom: 10px !important;
+      padding-bottom: 10px !important;
+    }
+
+    .img-team {
+      width: 70%;
+      margin: 12px 0;
+    }
+
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .team-name {
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+
+  </style>
+
+  <div id="header"></div>
+
+  <div class="container-fluid banner-yellow ">
+    <div class="container">
+        <h3>Tentang Kami</h3>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="text-left" >
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="background-tab" data-bs-toggle="tab" data-bs-target="#background" type="button" role="tab" aria-controls="background" aria-selected="true">Background</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-controls="mission" aria-selected="false">Mission</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-controls="vision" aria-selected="false">Vision</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button" role="tab" aria-controls="team" aria-selected="false">Team</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="owner-tab" data-bs-toggle="tab" data-bs-target="#owner" type="button" role="tab" aria-controls="owner" aria-selected="false">Owner</button>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Background -->
+          <div class="tab-pane active" id="background" role="tabpanel" aria-labelledby="background-tab">
+            <div class="container">
+              <div class="row">
+                <div class="flex section-image col-lg-4">
+                  <img id="img" src="assets/images/icecream.svg" height="90%">
+                </div>
+                <div class="flex section-text col-lg-8 text-left">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mission -->
+          <div class="tab-pane" id="mission" role="tabpanel" aria-labelledby="mission-tab">
+            <div class="container">
+              <div class="row">
+                <div class="flex section-image col-lg-4">
+                  <img id="img" src="assets/images/edc.svg" height="90%">
+                </div>
+                <div class="flex section-text col-lg-8 text-left">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="vision" role="tabpanel" aria-labelledby="vision-tab">
+            <!-- Vision -->
+            <div class="container">
+              <div class="row">
+                <div class="flex section-image col-lg-4">
+                  <img id="img" src="assets/images/rocket.svg" height="90%">
+                </div>
+                <div class="flex section-text col-lg-8 text-left">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team -->
+          <div class="tab-pane" id="team" role="tabpanel" aria-labelledby="team-tab">
+            <div class="row" style="padding: 40px 0;">
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava1.svg" alt="..." class="img-team">
+                <span class="team-name">Niko</span>
+                <span class="team-role">Senior Manager</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava2.svg" alt="..." class="img-team">
+                <span class="team-name">Azra</span>
+                <span class="team-role">Senior Manager</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava3.svg" alt="..." class="img-team">
+                <span class="team-name">Omar</span>
+                <span class="team-role">Marketing Lead</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava4.svg" alt="..." class="img-team">
+                <span class="team-name">Miranti</span>
+                <span class="team-role">Education Lead</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava5.svg" alt="..." class="img-team">
+                <span class="team-name">Amanda</span>
+                <span class="team-role">Designer</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava6.svg" alt="..." class="img-team">
+                <span class="team-name">Joko</span>
+                <span class="team-role">Designer</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava7.svg" alt="..." class="img-team">
+                <span class="team-name">Budi</span>
+                <span class="team-role">Engineer</span>
+              </div>
+
+              <div class="img-container col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <img src="assets/images/ava8.svg" alt="..." class="img-team">
+                <span class="team-name">Amir</span>
+                <span class="team-role">Engineer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Owner -->
+          <div class="tab-pane" id="owner" role="tabpanel" aria-labelledby="owner-tab">
+            <div class="container">
+              <div class="row">
+                <div class="flex section-image col-lg-4">
+                  <img id="img" src="assets/images/ava9.svg" height="90%">
+                </div>
+                <div class="flex section-text col-lg-8 text-left">
+                  <h4>Djamal Bryant, 29</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+</body>
+</html>

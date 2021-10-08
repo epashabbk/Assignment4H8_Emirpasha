@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Script JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="scripts.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('#header').load("_header.html header");
+        $('#footer').load("_footer.html footer");
+
+        setTimeout(function(){ $('li #home').addClass('active') }, 100);
+
+        loadBasaJawaSelect()
+      });
+
+      function loadBasaJawaSelect() {
+        var data = [
+            { "indo": "Permisi", "jawa": "Nuwun" },
+            { "indo": "Makan", "jawa": "Mangan" },
+            { "indo": "Minum", "jawa": "Ngumbe" },
+            { "indo": "Melihat", "jawa": "Ndelok" },
+            { "indo": "Ikut", "jawa": "Melu" },
+            { "indo": "Mendengar", "jawa": "Krungu" }
+        ];
+
+        $('input[name=translateJawa]').val(data[0].jawa);
+        
+        data.forEach(e => {
+          $('#demo-language-select').append('<option value="' + e.jawa + '">' + e.indo + '</option>');
+        });
+      }
+
+      function getSelectValue(sel) {
+        $('input[name=translateJawa]').val(sel.value);
+      }
+    </script>
+
+    <link rel="icon" href="assets/logo/Favicon.ico" type="image/icon" />
+    <title>basabasa</title>
+  </head>
+
+  <body>
+    <style>
+      @media (max-width: 544px) {  
+        .main-title {
+          font-size: 2em !important;
+          font-weight: 700;
+        }
+        
+        .main-section-content {
+          text-align: center;
+        }
+        
+        .description2 {
+          font-size: 1.2em;
+          text-align: center ;
+        }
+      }
+      @media (min-width: 544px) {  
+        .modal-custom {
+          min-width: 600px;
+        }
+        
+        .main-section-content {
+          text-align: left;
+        }
+        .btn-start-learn {
+          align-self: flex-start;
+          padding: 20px 46px;
+          border-radius: 12px;
+        }
+      }
+
+      .description2 {
+        font-size: 1.2em;
+        text-align: left ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .btn-start-learn {
+        max-width: 350px;
+      }
+
+      .home-section {
+        padding-top: 110px;
+      }
+
+      .main-image {
+        height: 80%;
+      }
+
+      .card {
+        margin: 20px 10px;
+        position: relative;
+      }
+
+      .banner {
+        height: 100vh;
+        background: url(assets/bg2.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .main-section-content {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding-top: 100px;
+      }
+
+
+      .demo-language-title, .demo-language-label {
+        color: #ffffff;
+      }
+
+      .btn-primary {
+        color: #ffffff;
+        background-color: #7cb518;
+        border-color: #7cb518;
+      }
+
+      .section-demo-language {
+        background-color: #7d0085;
+      }
+
+      .demo-language-label {
+        font-size: 1.4em;
+      }
+
+      .demo-language-image {
+        margin: 60px 0;
+        height: 200px;
+      }
+
+      .demo-language-select, .demo-language-input {
+        margin-top: 8px;
+        font-size: 1.6em;
+        font-weight: 600;
+        text-align: center;
+        border: 0px;
+      }
+
+      .btn-light {
+        margin-right: 10px;
+      }
+
+      body {
+        font-family: "Quicksand", sans-serif !important;
+      }
+
+      .btn-secondary {
+        color: white;
+        background-color: rgb(20, 140, 148);
+        border: rgb(20, 140, 148);
+      }
+
+      .display1{
+        margin: auto;
+        font-size: 2.2em;
+      } 
+
+      .main-title {
+        color: #330036;
+        font-size: 3.5em;
+        font-weight: 700;
+      }
+
+      .developer {
+        display: block;
+        float: right;
+        color: lightgray;
+      }
+
+      .copyright {
+        color: lightgray;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .btn-watch {
+        border-radius: 24px;
+        background-color: white;
+        color: #555;
+        border-color: #555;
+        border-width: 3px;
+      }
+
+      .imageYoutube {
+        background: url(assets/icons/youtube.png);
+        background-size: 500px;
+        height: 500px;
+        min-width: 500px;
+        width: 500px;
+        margin: auto;
+        padding: auto;
+        background-repeat:no-repeat;
+      }
+
+      .btn-watch > .line1 {
+        font-size: 0.9em;
+      }
+
+      .btn-watch > .line2 {
+        font-size: 1.4em;
+        font-weight: 500;
+      }
+
+      #watchOnInstagram {
+        margin-left: 10px;
+      }
+
+      .table-curved {
+          border-collapse: separate !important;
+          border-spacing: 0 !important;
+          border: solid #DDD 0px;
+          border-radius: 12px;
+      }
+      .table-curved thead tr {
+        color: #FFF;
+        text-align: center;
+      } 
+      .table-curved th, td, tr {
+        border: 1px solid #FFF;
+      } 
+      .table-curved .cell-title {
+        background-color: #F3F3F3;
+        text-align: center;
+        font-size: 1em;
+        color: #330036;
+        font-weight: 500;
+      }
+      .table-curved .cell-1 {
+        background-color: #EAEAEA;
+        text-align: center;
+      }
+      .table-curved .cell-2 {
+        background-color: #D6D6D6;
+        text-align: center;
+      }
+      .table-curved thead tr:first-child th:first-child {
+          border-radius: 12px 0 0 0;
+      }
+      .table-curved th:last-child {
+          border-radius: 0 12px 0 0;
+      }
+      .table-curved th:only-child{
+          border-radius: 12px 12px 0 0;
+      }
+      .table-curved tr:last-child td:first-child {
+          border-radius: 0 0 0 12px;
+      }
+      .table-curved tr:last-child td:last-child {
+          border-radius: 0 0 12px 0;
+      }
+      .btn-choose-plan {
+        background-color: #330036;
+        border-color: transparent;
+      }
+      .flex-vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      .desc-section-content{
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      .contact-detail-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+      }
+
+      .contact-detail {
+        display: flex;
+        background-color: white;
+        border-width: 3px;
+        margin: 12px 4px;
+        border-radius: 44px;
+        padding: 18px;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      .label-contact {
+        font-weight: 600;
+      }
+
+      .value-contact {
+        font-weight: 600;
+      }
+
+      .contact-icon {
+        height: 40px;
+        margin-right: 12px;
+      }
+
+      .instagram {
+        color: #87178F;
+        border-color: #87178F;
+      }
+
+      .youtube {
+        color: #DB162F;
+        border-color: #DB162F;
+      }
+
+      .youtube:hover {
+        color: #FFF;
+      }
+      .instagram:hover {
+        color: #FFF;
+        border-color: #87178F;
+      }
+      .img-head {
+        width: 80%;
+      }
+      .container-demo-language {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .img-partner {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+    </style>
+    <div id="header"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-custom modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mulai Belajar Sekarang</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-curved">
+              <thead>
+                <tr>
+                  <th scope="col" style="background-color: #330036;"><span>Subscription<br/>Plan</span></th>
+                  <th scope="col" style="background-color: #520556;"><span>Basic</span><br/><span>Rp 50.000 / bln</span></th>
+                  <th scope="col" style="background-color: #760A7B;"><span>Professional</span><br/><span>Rp 100.000 / bln</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="cell-title" scope="row">Language Program</th>
+                  <td class="cell-1">5 Programs</td>
+                  <td class="cell-2">Unlimited</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Exclusive Content</th>
+                  <td class="cell-1">-</td>
+                  <td class="cell-2">Yes</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Video Study</th>
+                  <td class="cell-1">-</td>
+                  <td class="cell-2">Yes</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Case Study</th>
+                  <td class="cell-1">2 Cases</td>
+                  <td class="cell-2">Unlimited</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Quiz and Practices</th>
+                  <td class="cell-1">3 Topics</td>
+                  <td class="cell-2">Unlimited</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Priority Announcement</th>
+                  <td class="cell-1">-</td>
+                  <td class="cell-2">Yes</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Tips and Tricks</th>
+                  <td class="cell-1">-</td>
+                  <td class="cell-2">Yes</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">Summary Notes</th>
+                  <td class="cell-1">-</td>
+                  <td class="cell-2">Yes</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row">One on One Tutor</th>
+                  <td class="cell-1">-</td>
+                  <td class="cell-2">Yes</td>
+                </tr>
+                <tr>
+                  <th class="cell-title" scope="row" style="border-radius: 0 0 0 12px;"></th>
+                  <td class="cell-1"><button class="btn btn-primary btn-choose-plan">Choose Plan</button></td>
+                  <td class="cell-2"><button class="btn btn-primary btn-choose-plan">Choose Plan</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Main Section-->
+    <div class="container-fluid banner">
+      <div class="container main-section-content">
+        <div class="row">
+          <div class="flex-vertical col-lg-6">
+            <span class="main-title">Nuwun sewu, ayo miwiti sinau basabasa</span>
+            <button class="btn btn-primary mt-4 btn-lg btn-start-learn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Mulai Belajar Sekarang
+            </button>
+          </div>
+          <div class="headline-post-image col-lg-6">
+            <img id="img" style="margin-top: 24px;" width="100%" src="assets/images/Banteng.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 2 - Description -->
+    <div class="container-fluid py-5 mt-5">
+      <div class="container desc-section-content">
+        <div class="row">
+          <div class="flex-vertical col-lg-4">
+            <img class="img-head" src="assets/images/Murid.svg"/>
+          </div>
+          <div class="description2 col-lg-8">
+            <h3>Indonesia's Number One Language Learning</h3>
+            <p>
+              Basabasa has covered all your needs with multipurpose selection of
+              languages that immerse you with direct conversation to fast pace
+              your learning process
+            </p>     
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5">
+      <div class="container desc-section-content">
+        <div class="row">
+          <div class="flex-vertical col-lg-4 order-lg-2">
+            <img class="img-head" src="assets/images/Murid2.svg"/>
+          </div>
+          <div class="description2 col-lg-8 order-lg-1">
+            <h3>Indonesia's Number One Language Learning</h3>
+            <p>Basabasa has covered all your needs with multipurpose selection of
+              languages that immerse you with direct conversation to fast pace
+              your learning process
+            </p>     
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- Section 3 - Card -->
+    <section id="SellingPoints">
+      <div class="container-why-study-basa container py-2">
+        <div class="title">
+          <h3>Why Study with Basabasa</h3>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="assets/images/USP1.svg"
+                alt="..."
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Complete Bahasa Programs</h5>
+                <p class="card-text">
+                  Here at Basabasa we provide structured steps for different
+                  levels to suite your study needs
+                </p>
+                <a href="#"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="assets/images/USP2.svg"
+                alt="..."
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Complete Bahasa Programs</h5>
+                <p class="card-text">
+                  Here at Basabasa we provide structured steps for different
+                  levels to suite your study needs
+                </p>
+                <a href="#"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="assets/images/USP3.svg"
+                alt="..."
+                class="card-img-top rounded"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Complete Bahasa Programs</h5>
+                <p class="card-text">
+                  Here at Basabasa we provide structured steps for different
+                  levels to suite your study needs
+                </p>
+                <a href="#"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid py-5 mt-5" style="margin-bottom: 160px;">
+      <div class="container desc-section-content text-center">
+        <h3>TRUSTED BY OUR PARTNERS</h3>
+        <div class="row row-partners" style="display: flex; flex-direction: row; justify-content: center; align-self: center; align-items: center;">
+          <div class="col-lg-3">
+            <img class="img-partner" src="assets/images/partner-gojek.svg"/>
+          </div>
+          <div class="col-lg-3">
+            <img class="img-partner" src="assets/images/partner-ruangguru.svg"/>
+          </div>
+          <div class="col-lg-3">
+            <img class="img-partner" src="assets/images/partner-duolingo.svg"/>
+          </div>
+          <div class="col-lg-3">
+            <img class="img-partner" src="assets/images/partnertraveloka.svg"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 : Demo Language -->
+    <div class="container-fluid py-5 section-demo-language">
+      <div class="container container-demo-language text-center">
+        <h3 class="demo-language-title text-center">Basabasa Demo Language</h3>
+        <br />
+        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+          <div class="col-lg-3">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1" class="demo-language-label">Bahasa Indonesia</label>
+                <select
+                  class="form-select form-control-lg demo-language-select" 
+                  id="demo-language-select"
+                  onchange="getSelectValue(this);"
+                >
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-3">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1" class="demo-language-label">Bahasa Jawa</label>
+                <input
+                  class="form-control form-control-lg demo-language-input"
+                  id="#demo-language-input" name="translateJawa"
+                  disabled
+                  />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <img class="demo-language-image" src="assets/images/animal.svg"/>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- Section 5 - Lets start learning -->
+
+    <div class="container-fluid py-5">
+      <div class="container desc-section-content">
+        <div class="row" style="display: flex; flex-direction: row; align-content: center; align-items: center; justify-content: center;">
+          <div class="flex-vertical col-lg-4">
+            <img class="img-head" src="assets/images/nonton-sekarang.svg"/>
+          </div>
+          <div class="flex-vertical col-lg-6">
+            <div>
+              <h2>Let's Get your Learning Started!</h2>
+              <div class="row">
+                <div class="col-lg-6" style="display: flex; justify-content: center; align-content: center; align-items: center;">
+                  <a class="btn btn-danger youtube contact-detail" target="_blank" href="https://youtube.com">
+                    <img class="contact-icon" src="assets/images/youtube.svg">
+                    <div class="contact-detail-text youtube">
+                      <span class="label-contact">Tonton Sekarang</span>
+                      <span class="value-contact">di Youtube</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6" style="display: flex; justify-content: center; align-content: center; align-items: center;">
+                  <a class="btn btn-primary instagram contact-detail" target="_blank" href="https://instagram.com">
+                    <img class="contact-icon" src="assets/images/instagram.svg">
+                    <div class="contact-detail-text ">
+                      <span class="label-contact">Tonton Sekarang</span>
+                      <span class="value-contact">di Instagram</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>   
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <div id="footer"></div>
+
+    <!-- Script JS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
